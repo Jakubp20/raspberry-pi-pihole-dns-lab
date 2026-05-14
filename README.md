@@ -24,3 +24,24 @@ Example network topology:
 
 ```text
 Windows PC → Router → Raspberry Pi / Pi-hole → Upstream DNS → Internet
+
+## Screenshots
+
+### Pi-hole Dashboard
+
+![Pi-hole Dashboard](pihole-dashboard.png)
+
+The Pi-hole dashboard shows that the server is actively processing DNS queries from local clients. In this setup, Pi-hole processed 1916 DNS queries and blocked 949 of them, resulting in a 49.5% block rate.
+
+### nmap Service Scan
+
+![nmap service scan](nmap-service-scan.png)
+
+The nmap scan identified the following open TCP ports on the Raspberry Pi:
+
+```text
+22/tcp   open  ssh
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+443/tcp  open  https
