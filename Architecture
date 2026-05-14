@@ -1,0 +1,18 @@
+## Architecture
+
+The lab uses a Raspberry Pi as a local DNS filtering server inside a home network.  
+The Windows client sends DNS queries to the Raspberry Pi instead of using the router or the ISP DNS directly.
+
+```text
+Windows Client
+     |
+     | DNS queries
+     v
+Raspberry Pi / Pi-hole
+     |
+     | allowed DNS queries
+     v
+Upstream DNS Provider
+     |
+     v
+Internet
